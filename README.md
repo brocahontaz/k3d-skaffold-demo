@@ -8,6 +8,10 @@ The environment supports reload on code change as well as reaching the app throu
 
 Run the demo by executing the start-script, `tools/skaffold/start.sh`, in your shell.
 
+You can now watch the app reload on any code changes by following the log output.
+
+The demo-app is reachable via localhost, either through curl or your fav browser.
+
 ## Parts
 
 ### demo-app
