@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+spec:
+  selector:
+    matchLabels:
+      app: demo-app
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      - name: demo-app
+        image: "{{.Values.image}}"
+        ports:
+          - name: http
+            containerPort: 3000
+        volumeMounts:
+          - mountPath: "/app"
+            name: task-pv-storage
+      volumes:
+        - name: task-pv-storage
+          persistentVolumeClaim:
+            claimName: task-pv-claim
+

@@ -1,0 +1,20 @@
+apiVersion: skaffold/v2beta10
+kind: Config
+
+build:
+  artifacts:
+  - image: demo-app
+    context: ../../demo-app
+    docker:
+      dockerfile: Dockerfile
+
+# Default deployment
+deploy:
+  helm:
+    releases:
+      - name: demo-app
+        wait: false
+        chartPath: ../../demo-chart
+        skipBuildDependencies: false
+        artifactOverrides:
+          image: demo-app

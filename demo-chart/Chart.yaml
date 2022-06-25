@@ -1,0 +1,11 @@
+apiVersion: v2
+name: demo
+description: Helm chart for k3d-skaffold-demo
+type: application
+version: 1.0.0
+appVersion: 1.0.0
+deprecated: false
+maintainers:
+  - name: Johan Andersson
+    email: contact@johanandersson.se
+    url: www.johanandersson.se
