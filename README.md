@@ -4,6 +4,9 @@ Simple demo showing how a local kubernetes dev environment can be set up, using 
 
 The environment supports reload on code change as well as reaching the app through ingress routing.
 
+## Running the demo
+Run the demo by executing the start-script, `tools/skaffold.start.sh` in your shell.
+
 ## demo-app
 
 Very simple nodejs app using express, to demonstrate running k3d with Skaffold.
